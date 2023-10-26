@@ -1,7 +1,13 @@
 "use client";
 
 import type { ReactElement } from "react";
-import { BagIcon, FavoriteIcon, HomeIcon, SearchIcon, UserIcon } from "./icons";
+import {
+  BagIcon,
+  CategoryIcon,
+  FavoriteIcon,
+  HomeIcon,
+  UserIcon,
+} from "./icons";
 
 type NIWProps = {
   children: ReactElement;
@@ -11,7 +17,7 @@ const NavItemWrapper = ({ children, onClick }: NIWProps) => {
   return (
     <div
       onClick={onClick}
-      className="flex w-12 cursor-pointer items-center justify-center active:opacity-40"
+      className="flex w-12 cursor-pointer items-center justify-center active:scale-90 active:opacity-40"
     >
       {children}
     </div>
@@ -28,7 +34,7 @@ const NavBar = () => {
         <FavoriteIcon />
       </NavItemWrapper>
       <NavItemWrapper onClick={() => console.log("do something!!")}>
-        <SearchIcon />
+        <CategoryIcon />
       </NavItemWrapper>
       <NavItemWrapper onClick={() => console.log("do something!!")}>
         <BagIcon />
